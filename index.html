@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ride with Shane at RNR Tires: Your Dream Ride, Simplified! Top brands, flexible payments, free services, and expert advice for your tire and wheel needs.">
+  <title>Ride with Shane at RNR Tires</title>
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveBusiness",
+    "name": "RNR Tires",
+    "description": "Ride with Shane at RNR Tires: Your Dream Ride, Simplified! Flexible payment options, top name brands, free premium services, and expert advice.",
+    "url": "https://www.example.com",
+    "telephone": "334-279-0059",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1059 N. Eastern Blvd",
+      "addressLocality": "Montgomery",
+      "addressRegion": "AL",
+      "postalCode": "36117"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav aria-label="Main Navigation">
+      <div class="logo">RNR Tires</div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#audio">Audio</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" role="banner" aria-label="Welcome Banner">
+    <video autoplay muted>
+      <source src="20250223_1523_Drive%20with%20Style_simple_compose_01jmtb3gt2fsjtqyzb3xkfxay8.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <img class="hero-image" src="roadbackground.svg" alt="RNR Tires Hero Image">
+    <div class="hero-content">
+      <h1>Ride with Shane at RNR Tires</h1>
+      <p>Your Dream Ride, Simplified!</p>
+      <div>
+        <button class="btn" onclick="document.querySelector('.contact-section').scrollIntoView({ behavior: 'smooth' });">
+          Get Started
+        </button>
+        <button class="btn secondary-btn" onclick="document.querySelector('.cards-container').scrollIntoView({ behavior: 'smooth' });">
+          Explore Services
+        </button>
+      </div>
+      <div class="contact-info">
+        <p>Montgomery, AL: 1059 N. Eastern Blvd, <a href="tel:+13342790059">334.279.0059</a></p>
+        <p>Shane Lockhart: Call or text me direct (cell) at <a href="tel:+13342240564">334.224.0564</a> or <a href="#contact">use contact form</a> to email me direct</p>
+      </div>
+      <div class="trust-signals">
+        <span>Trusted by 10,000+ Drivers</span>
+        <span>5-Star Rated</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Overview Section -->
+    <section class="overview-section">
+      <h2>Why Choose RNR Tire Express?</h2>
+      <p>At RNR Tire Express, we make your dream ride a reality—today! With Shane and our expert team, enjoy top-quality tires and wheels from leading brands, tailored to your style and budget. Our "Everyone's Approved" payment plans mean no credit worries—just flexible options to get you rolling fast.</p>
+      <p>Every purchase comes with our Premium Customer Care Package: free nitrogen, flat repair, alignment checks, tire rotation & balance, professional installation, and 12 months of roadside assistance. Plus, join Roll Pro for added peace of mind with road hazard protection.</p>
+    </section>
+
+    <!-- Audio Section -->
+    <section class="soundcloud-section" id="audio">
+      <h2>
+        <svg style="width: 2rem; fill: #ff3333; vertical-align: middle;" viewBox="0 0 24 24">
+          <path d="M12 3a9 9 0 100 18 9 9 0 000-18zm-7 9a7 7 0 1114 0 7 7 0 01-14 0z"/>
+        </svg> 
+        Hear the Latest Podcast
+      </h2>
+      <div class="soundcloud-container">
+        <audio controls title="RNR Tire Express Montgomery - Ride with Shane">
+          <source src="RNR tire express Montgomery, RIDE with SHANE1.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </section>
+
+    <!-- Index Cards Section -->
+    <section class="cards-container" id="features" aria-label="Key Features">
+      <a href="finance.html" class="card-link">
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">💳</div>
+          <h3>Everyone's Approved Payment Options</h3>
+          <p>Flexible plans regardless of your credit history to get you rolling fast.</p>
+        </div>
+      </a>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🏷️</div>
+        <h3>Top Name Brands</h3>
+        <p>Discover premium brands: <a href="https://rnrtires.com/wheels/">Wheels</a> | <a href="https://rnrtires.com/tires/">Tires</a></p>
+      </div>
+      <a href="services.html" class="card-link">
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">🛠️</div>
+          <h3>Free Services</h3>
+          <p>Includes Nitrogen, Flat Repair, Alignment Checks, Tire Rotation & Balance, Installation, and 12-Month Roadside Assistance.</p>
+        </div>
+      </a>
+      <a href="blog.html" class="card-link">
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">🔧</div>
+          <h3>Talk to an Expert</h3>
+          <p>Read expert tips and advice from Shane and the RNR team.</p>
+        </div>
+      </a>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <h2>
+        <svg style="width: 2rem; fill: #ff3333; vertical-align: middle;" viewBox="0 0 24 24">
+          <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"/>
+        </svg> 
+        What Our Customers Say
+      </h2>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <p>"Shane made it so easy to get my dream wheels!"</p>
+          <p>- John D.</p>
+        </div>
+        <div class="testimonial">
+          <p>"Best service and prices around!"</p>
+          <p>- Sarah M.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section" id="contact" aria-label="Contact Form">
+      <h2>Ready to Transform Your Ride?</h2>
+      <p>Get a quick quote or visit us today.</p>
+      <form action="/submit-form" method="POST" name="contact" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required aria-required="true" placeholder="Your Email">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Your Message"></textarea>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Sticky CTA -->
+  <div class="sticky-cta">
+    <button class="btn" style="background: #fff; color: #ff3333;" onclick="document.querySelector('.contact-section').scrollIntoView({ behavior: 'smooth' });">
+      Contact Shane Now
+    </button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <h4>RNR Tires</h4>
+      <p>© 2025 All rights reserved.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="#features">Services</a></p>
+      <p><a href="#contact">Contact</a></p>
+    </div>
+    <div>
+      <h4>Contact Us</h4>
+      <p><a href="tel:+13342790059">334.279.0059</a></p>
+      <p>1059 N. Eastern Blvd, Montgomery, AL 36117</p>
+      <p>info@rnrtires.com</p>
+      <p>Website created by <a href="https://intelliaipro.com">Intelliaipro.com</a></p>
+    </div>
+  </footer>
+
+  <!-- Chatbot Script -->
+  <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="46088"></script>
+  <!-- JavaScript for Video -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const video = document.querySelector('.hero video');
+      const image = document.querySelector('.hero-image');
+      if (video && image) {
+        video.addEventListener('ended', function() {
+          video.style.display = 'none';
+          image.style.display = 'block';
+        });
+      }
+    });
+  </script>
+</body>
+</html>
