@@ -1,200 +1,312 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ride with Shane at RNR Tires: Your Dream Ride, Simplified! Top brands, flexible payments, free services, and expert advice for your tire and wheel needs.">
-  <title>Ride with Shane at RNR Tires</title>
-  <!-- Structured Data for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AutomotiveBusiness",
-    "name": "RNR Tires",
-    "description": "Ride with Shane at RNR Tires: Your Dream Ride, Simplified! Flexible payment options, top name brands, free premium services, and expert advice.",
-    "url": "https://www.rnrtiresexpress.com",
-    "telephone": "334-279-0059",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "1059 N. Eastern Blvd",
-      "addressLocality": "Montgomery",
-      "addressRegion": "AL",
-      "postalCode": "36117"
-    }
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff3333;
+}
+
+.nav-links a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff3333;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  display: block; /* Ensure video is visible */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.hero-content {
+  z-index: 1;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-buttons .btn {
+  padding: 0.8rem 2rem;
+  margin: 0.5rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.hero-buttons .btn:hover {
+  transform: scale(1.05);
+}
+
+.btn {
+  background: #ff3333;
+  color: #fff;
+  border: none;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.secondary-btn:hover {
+  background: #fff;
+  color: #ff3333;
+}
+
+/* Overview Section */
+.overview-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.overview-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ff3333;
+}
+
+/* Audio Section */
+.soundcloud-section {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.soundcloud-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.soundcloud-container audio {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Cards Section */
+.cards-container {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ff3333;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ff3333;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.contact-section label {
+  text-align: left;
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-section button {
+  align-self: center;
+}
+
+/* Sticky CTA */
+.sticky-cta {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 10;
+}
+
+/* Footer */
+footer {
+  padding: 2rem;
+  background: #333;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer a {
+  color: #ff3333;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
   }
-  </script>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <nav aria-label="Main Navigation">
-      <div class="logo">RNR Tires</div>
-      <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#audio">Audio</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero" role="banner" aria-label="Welcome Banner">
-    <video autoplay muted playsinline>
-      <source src="20250225_2105_Hellcat Arrives at RNR.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>RNR Tire Express</h1>
-      <p>1059 N. Eastern Blvd, Montgomery, AL 36117 | 334-279-0059</p>
-      <h2>Ride with Shane</h2>
-      <p>Call: 334-223-0564</p>
-      <div class="hero-buttons">
-        <button class="btn" onclick="document.querySelector('.contact-section').scrollIntoView({ behavior: 'smooth' });">
-          Get Started
-        </button>
-        <button class="btn secondary-btn" onclick="document.querySelector('.cards-container').scrollIntoView({ behavior: 'smooth' });">
-          Explore Services
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Content -->
-  <main>
-    <!-- Overview Section -->
-    <section class="overview-section">
-      <h2>Why Choose RNR Tire Express?</h2>
-      <p>At RNR Tire Express, we make your dream ride a reality—today! With Shane and our expert team, enjoy top-quality tires and wheels from leading brands, tailored to your style and budget. Our "Everyone's Approved" payment plans mean no credit worries—just flexible options to get you rolling fast.</p>
-      <p>Every purchase comes with our Premium Customer Care Package: free nitrogen, flat repair, alignment checks, tire rotation & balance, professional installation, and 12 months of roadside assistance. Plus, join Roll Pro for added peace of mind with road hazard protection.</p>
-    </section>
-
-    <!-- Audio Section -->
-    <section class="soundcloud-section" id="audio">
-      <h2>
-        <svg style="width: 2rem; fill: #ff3333; vertical-align: middle;" viewBox="0 0 24 24">
-          <path d="M12 3a9 9 0 100 18 9 9 0 000-18zm-7 9a7 7 0 1114 0 7 7 0 01-14 0z"/>
-        </svg> 
-        Hear the Latest Podcast
-      </h2>
-      <div class="soundcloud-container">
-        <audio controls title="RNR Tire Express Montgomery - Ride with Shane">
-          <source src="RNR tire express Montgomery, RIDE with SHANE1.wav" type="audio/wav">
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-    </section>
-
-    <!-- Index Cards Section -->
-    <section class="cards-container" id="features" aria-label="Key Features">
-      <a href="finance.html" class="card-link">
-        <div class="card">
-          <div class="card-icon" aria-hidden="true">💳</div>
-          <h3>Everyone's Approved Payment Options</h3>
-          <p>Flexible plans regardless of your credit history to get you rolling fast.</p>
-        </div>
-      </a>
-      <a href="brands.html" class="card-link">
-        <div class="card">
-          <div class="card-icon" aria-hidden="true">🏷️</div>
-          <h3>Top Name Brands</h3>
-          <p>Discover premium brands for wheels and tires.</p>
-        </div>
-      </a>
-      <a href="services.html" class="card-link">
-        <div class="card">
-          <div class="card-icon" aria-hidden="true">🛠️</div>
-          <h3>Free Services</h3>
-          <p>Includes nitrogen, flat repair, alignment checks, rotation, installation, and roadside assistance.</p>
-        </div>
-      </a>
-      <a href="blog.html" class="card-link">
-        <div class="card">
-          <div class="card-icon" aria-hidden="true">🔧</div>
-          <h3>Talk to an Expert</h3>
-          <p>Read expert tips and advice from Shane and our team.</p>
-        </div>
-      </a>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-      <h2>
-        <svg style="width: 2rem; fill: #ff3333; vertical-align: middle;" viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"/>
-        </svg> 
-        What Our Customers Say
-      </h2>
-      <div class="testimonial-grid">
-        <div class="testimonial">
-          <p>"Shane made it so easy to get my dream wheels!"</p>
-          <p>- John D.</p>
-        </div>
-        <div class="testimonial">
-          <p>"Best service and prices around!"</p>
-          <p>- Sarah M.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section class="contact-section" id="contact" aria-label="Contact Form">
-      <h2>Ready to Transform Your Ride?</h2>
-      <p>Get a quick quote or visit us today.</p>
-      <form action="/submit-form" method="POST" name="contact" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required aria-required="true" placeholder="Your Email">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Your Message"></textarea>
-        <button type="submit" class="btn">Submit</button>
-      </form>
-    </section>
-  </main>
-
-  <!-- Sticky CTA -->
-  <div class="sticky-cta">
-    <button class="btn" style="background: #fff; color: #ff3333;" onclick="document.querySelector('.contact-section').scrollIntoView({ behavior: 'smooth' });">
-      Contact Shane Now
-    </button>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <div>
-      <h4>RNR Tires</h4>
-      <p>© 2025 All rights reserved.</p>
-    </div>
-    <div>
-      <h4>Quick Links</h4>
-      <p><a href="#features">Services</a></p>
-      <p><a href="#contact">Contact</a></p>
-    </div>
-    <div>
-      <h4>Contact Us</h4>
-      <p><a href="tel:+13342790059">334.279.0059</a></p>
-      <p>1059 N. Eastern Blvd, Montgomery, AL 36117</p>
-      <p>info@rnrtires.com</p>
-      <p>Website created by <a href="https://intelliaipro.com">Intelliaipro.com</a></p>
-    </div>
-  </footer>
-
-  <!-- Chatbot Script -->
-  <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="46088"></script>
-  <!-- JavaScript for Video Handling -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const video = document.querySelector('.hero video');
-
-      // Ensure video plays when ready
-      video.addEventListener('canplay', function() {
-        video.play();
-      });
-    });
-  </script>
-</body>
-</html>
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+  .nav-links a {
+    margin-left: 1rem;
+  }
+}
