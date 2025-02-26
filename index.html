@@ -41,12 +41,12 @@
 
   <!-- Hero Section -->
   <section class="hero" role="banner" aria-label="Welcome Banner">
-    <!-- The video file is assumed to be in the same folder as index.html -->
-    <video autoplay muted>
+    <!-- The video element now includes playsinline and an onerror handler -->
+    <video autoplay muted playsinline onerror="this.style.display='none'; document.querySelector('.hero-image').style.display='block';">
       <source src="20250223_1523_Drive%20with%20Style_simple_compose_01jmtb3gt2fsjtqyzb3xkfxay8.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <!-- Updated hero image source -->
+    <!-- Initially hidden hero image; will be shown if the video ends or fails to load -->
     <img class="hero-image" src="9588_Rent-N-Roll-tire-express.jpg" alt="RNR Tires Hero Image">
     <div class="hero-content">
       <!-- The reversed R is represented using the Cyrillic Я -->
