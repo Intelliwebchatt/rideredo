@@ -9,6 +9,7 @@ body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: #333;
+  background: #f5f5f5; /* Light background for contrast */
 }
 
 /* Header */
@@ -30,9 +31,10 @@ nav {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #ff3333;
+  letter-spacing: 1px;
 }
 
 .nav-links a {
@@ -40,7 +42,7 @@ nav {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -67,7 +69,7 @@ nav {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  display: block; /* Ensure video is visible */
+  display: block;
 }
 
 .hero-overlay {
@@ -76,7 +78,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4); /* Slightly darker overlay for readability */
   z-index: 0;
 }
 
@@ -86,20 +88,23 @@ nav {
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 600;
   margin: 1rem 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .hero-buttons .btn {
@@ -108,7 +113,7 @@ nav {
   font-size: 1.1rem;
   border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.3s, background 0.3s;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .hero-buttons .btn:hover {
@@ -119,6 +124,7 @@ nav {
   background: #ff3333;
   color: #fff;
   border: none;
+  font-weight: 500;
 }
 
 .secondary-btn {
@@ -138,12 +144,20 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .overview-section h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
   color: #ff3333;
+}
+
+.overview-section p {
+  font-size: 1.1rem;
+  color: #555;
 }
 
 /* Audio Section */
@@ -156,11 +170,13 @@ nav {
 .soundcloud-section h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: #333;
 }
 
 .soundcloud-container audio {
   width: 100%;
   max-width: 600px;
+  border-radius: 5px;
 }
 
 /* Cards Section */
@@ -184,22 +200,29 @@ nav {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card-icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: #ff3333;
 }
 
 .card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #ff3333;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
 }
 
 /* Testimonials */
@@ -212,6 +235,7 @@ nav {
 .testimonials h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: #333;
 }
 
 .testimonial-grid {
@@ -227,6 +251,15 @@ nav {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+  color: #555;
+}
+
+.testimonial p:last-child {
+  margin-top: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  color: #ff3333;
 }
 
 /* Contact Section */
@@ -235,6 +268,9 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .contact-section h2 {
@@ -243,17 +279,24 @@ nav {
   color: #ff3333;
 }
 
+.contact-section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
 .contact-section form {
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  margin: 2rem auto;
+  margin: 0 auto;
 }
 
 .contact-section label {
   text-align: left;
   margin: 0.5rem 0;
   font-weight: 500;
+  color: #333;
 }
 
 .contact-section input,
@@ -263,322 +306,20 @@ nav {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
-}
-
-.contact-section button {
-  align-self: center;
-}
-
-/* Sticky CTA */
-.sticky-cta {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 10;
-}
-
-/* Footer */
-footer {
-  padding: 2rem;
-  background: #333;
-  color: #fff;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-footer a {
-  color: #ff3333;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  .hero-content h2 {
-    font-size: 1.5rem;
-  }
-  .nav-links a {
-    margin-left: 1rem;
-  }
-}
-/* Reset and Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
   font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  color: #333;
+  transition: border-color 0.3s ease;
 }
 
-/* Header */
-header {
-  background: #fff;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #ff3333;
-}
-
-.nav-links a {
-  margin-left: 2rem;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #ff3333;
-}
-
-/* Hero Section */
-.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  text-align: center;
-}
-
-.hero video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  display: block; /* Ensure video is visible */
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 0;
-}
-
-.hero-content {
-  z-index: 1;
-  padding: 2rem;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero-content h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 1rem 0;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.hero-buttons .btn {
-  padding: 0.8rem 2rem;
-  margin: 0.5rem;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s, background 0.3s;
-}
-
-.hero-buttons .btn:hover {
-  transform: scale(1.05);
-}
-
-.btn {
-  background: #ff3333;
-  color: #fff;
-  border: none;
-}
-
-.secondary-btn {
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-.secondary-btn:hover {
-  background: #fff;
-  color: #ff3333;
-}
-
-/* Overview Section */
-.overview-section {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.overview-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #ff3333;
-}
-
-/* Audio Section */
-.soundcloud-section {
-  padding: 4rem 2rem;
-  background: #f9f9f9;
-  text-align: center;
-}
-
-.soundcloud-section h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.soundcloud-container audio {
-  width: 100%;
-  max-width: 600px;
-}
-
-/* Cards Section */
-.cards-container {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.card-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.card {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card-icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #ff3333;
-}
-
-/* Testimonials */
-.testimonials {
-  padding: 4rem 2rem;
-  background: #f9f9f9;
-  text-align: center;
-}
-
-.testimonials h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.testimonial {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Contact Section */
-.contact-section {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.contact-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #ff3333;
-}
-
-.contact-section form {
-  display: flex;
-  flex-direction: column;
-  max-width: 600px;
-  margin: 2rem auto;
-}
-
-.contact-section label {
-  text-align: left;
-  margin: 0.5rem 0;
-  font-weight: 500;
-}
-
-.contact-section input,
-.contact-section textarea {
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: #ff3333;
+  outline: none;
 }
 
 .contact-section button {
   align-self: center;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
 }
 
 /* Sticky CTA */
@@ -587,6 +328,16 @@ nav {
   bottom: 2rem;
   right: 2rem;
   z-index: 10;
+}
+
+.sticky-cta .btn {
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.sticky-cta .btn:hover {
+  transform: scale(1.1);
 }
 
 /* Footer */
@@ -601,24 +352,50 @@ footer {
   margin: 0 auto;
 }
 
+footer h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
 footer a {
   color: #ff3333;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 footer a:hover {
-  text-decoration: underline;
+  color: #fff;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .hero-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
   }
   .nav-links a {
     margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+  .hero-buttons .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+  .overview-section h2,
+  .contact-section h2 {
+    font-size: 2rem;
+  }
+  .soundcloud-section h2,
+  .testimonials h2 {
+    font-size: 1.8rem;
   }
 }
