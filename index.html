@@ -12,7 +12,7 @@
     "@type": "AutomotiveBusiness",
     "name": "RNR Tires",
     "description": "Ride with Shane at RNR Tires: Your Dream Ride, Simplified! Flexible payment options, top name brands, free premium services, and expert advice.",
-    "url": "https://www.example.com",
+    "url": "https://www.rnrtiresexpress.com",
     "telephone": "334-279-0059",
     "address": {
       "@type": "PostalAddress",
@@ -41,16 +41,14 @@
 
   <!-- Hero Section -->
   <section class="hero" role="banner" aria-label="Welcome Banner">
-    <!-- The video element now includes playsinline and an onerror handler -->
-    <video autoplay muted playsinline onerror="this.style.display='none'; document.querySelector('.hero-image').style.display='block';">
+    <video autoplay muted playsinline poster="9588_Rent-N-Roll-tire-express.jpg" onerror="this.style.display='none'; document.querySelector('.hero-image').style.display='block';">
       <source src="20250223_1523_Drive%20with%20Style_simple_compose_01jmtb3gt2fsjtqyzb3xkfxay8.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <!-- Initially hidden hero image; will be shown if the video ends or fails to load -->
-    <img class="hero-image" src="9588_Rent-N-Roll-tire-express.jpg" alt="RNR Tires Hero Image">
+    <img class="hero-image" src="9588_Rent-N-Roll-tire-express.jpg" alt="RNR Tires Hero Image - Premium Tires and Wheels" loading="lazy">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <!-- The reversed R is represented using the Cyrillic Я -->
-      <h1>ЯNR tire express</h1>
+      <h1>RNR Tire Express</h1>
       <p>1059 N. Eastern Blvd, Montgomery, AL 36117 | 334-279-0059</p>
       <h2>Ride with Shane</h2>
       <p>Call: 334-223-0564</p>
@@ -197,6 +195,12 @@
         video.addEventListener('ended', function() {
           video.style.display = 'none';
           image.style.display = 'block';
+          setTimeout(() => image.style.opacity = '1', 10); // Trigger fade-in
+        });
+        video.addEventListener('error', function() {
+          video.style.display = 'none';
+          image.style.display = 'block';
+          setTimeout(() => image.style.opacity = '1', 10);
         });
       }
     });
