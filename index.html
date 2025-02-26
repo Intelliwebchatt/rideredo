@@ -41,7 +41,7 @@
 
   <!-- Hero Section -->
   <section class="hero" role="banner" aria-label="Welcome Banner">
-    <video autoplay muted playsinline poster="9588_Rent-N-Roll-tire-express.jpg" onerror="this.style.display='none'; document.querySelector('.hero-image').style.display='block';">
+    <video autoplay muted playsinline poster="9588_Rent-N-Roll-tire-express.jpg">
       <source src="20250223_1523_Drive%20with%20Style_simple_compose_01jmtb3gt2fsjtqyzb3xkfxay8.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -186,23 +186,34 @@
 
   <!-- Chatbot Script -->
   <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="46088"></script>
-  <!-- JavaScript for Video -->
+  <!-- JavaScript for Video and Image Handling -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const video = document.querySelector('.hero video');
       const image = document.querySelector('.hero-image');
-      if (video && image) {
-        video.addEventListener('ended', function() {
-          video.style.display = 'none';
-          image.style.display = 'block';
-          setTimeout(() => image.style.opacity = '1', 10); // Trigger fade-in
-        });
-        video.addEventListener('error', function() {
+
+      // Show image if video fails to load
+      video.addEventListener('error', function() {
+        video.style.display = 'none';
+        image.style.display = 'block';
+        setTimeout(() => image.style.opacity = '1', 10);
+      });
+
+      // Show image when video ends
+      video.addEventListener('ended', function() {
+        video.style.display = 'none';
+        image.style.display = 'block';
+        setTimeout(() => image.style.opacity = '1', 10);
+      });
+
+      // Optional: Fallback if video doesn’t play within 5 seconds
+      setTimeout(() => {
+        if (video.paused) {
           video.style.display = 'none';
           image.style.display = 'block';
           setTimeout(() => image.style.opacity = '1', 10);
-        });
-      }
+        }
+      }, 5000);
     });
   </script>
 </body>
